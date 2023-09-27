@@ -1,0 +1,139 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none;color: #000;}
+body{color: #808080; font-size: 16px; font-weight: 500; line-height: 1.9;
+font-family:SpeedeeK, Malgun Gothic,'ë§‘ì€ ê³ ë”•', Dotum,'ë‹ì›€', Arial, sans-serif;}
+
+@font-face {
+    font-family:SpeedeeK;
+    font-weight:400;
+    font-style:normal;
+    src: url(../css/Speedee_K_L.eot);
+    src: url(../css/Speedee_K_L.eot#iefix) format('embedded-opentype'),
+         url(../css/Speedee_K_L.woff) format('woff'),
+         url(../css/Speedee_K_L.ttf) format('truetype'),
+         url(../css/Speedee_K_L.svg#webfont) format('svg')}
+  @font-face {
+    font-family:SpeedeeK;
+    font-weight:500;
+    font-style:normal;
+    src: url(../css/Speedee_K_R.eot);
+    src: url(../css/Speedee_K_R.eot#iefix) format('embedded-opentype'),
+         url(../css/Speedee_K_R.woff) format('woff'),
+         url(../css/Speedee_K_R.ttf) format('truetype'),
+         url(../css/Speedee_K_R.svg#webfont) format('svg')}
+  @font-face {
+    font-family:SpeedeeK;
+    font-weight:600;
+    font-style:normal;
+    src: url(../css/Speedee_K_B.eot);
+    src: url(../css/Speedee_K_B.eot#iefix) format('embedded-opentype'),
+         url(../css/Speedee_K_B.woff) format('woff'),
+         url(../css/Speedee_K_B.ttf) format('truetype'),
+         url(../css/Speedee_K_B.svg#webfont) format('svg')}
+  
+/* header 시작 */
+.header {width: 100%; position: absolute; z-index: 999; top: 0;}
+.header.on {position: fixed; background-color: #fff; z-index: 9999; height: 81px; border-bottom: 1px solid #ffbc0d; margin: 0 auto; box-sizing: border-box;}
+.header .header-wrap{max-width: 1168px; margin: 0 auto; height: 140px;}
+.header .logo{position: relative; top: 28px; display: flex; z-index: 1;}
+.header .logo img{vertical-align: top;}
+.header .nav{padding: 52px 0; display: flex; align-items: center;  position: absolute; top: 18px; left: 542px; height: 81px; z-index: 99996; box-sizing: border-box;}
+/* position:absolute;가 있기 때문에 z-index값을 줘야함($nav) */
+.header .nav.on{margin: -30px 0px;}
+.header .nav ul{display: flex; align-items: center;}
+.header .nav ul li a{margin-right: 85px; padding: 22px 10px; color: #292929; font-size: 20px; font-weight: 600; position: relative; height: 140px;}
+.header .nav ul li.on a{height: 140px; width: 100%;}
+.header .nav ul li a::after{content: ""; position: absolute; bottom: -43px; left: 0; width: 0px; height: 3px; background-color: #ffbc0d;}
+.header .nav ul li:hover a::after{width: 100%;}
+.header .nav ul li.on a::after{bottom: -12px;} 
+.header .nav ul li.active a::after{width: 100%;}
+/* .header .nav ul li.on a::after{bottom: -23px;}*/
+.header .nav .member{display: flex; align-items: center; margin: 0 0 50px -2px;}
+.header .member a{display: inline-block; width: 80px; height: 34px; margin-top: 50px;  padding-top: 2px;  font-size: 13px; line-height: 34px; font-weight: 600; text-align: center; border-radius: 48px; color: #fff; margin-right: 2px;}
+.header .member a:nth-child(1){background-color: #db0007;}
+.header .member a:nth-child(2){background-color: #d87e00; margin-left: 1px;}
+.header .member a:nth-child(3){background-color: #264a36; margin-left: 1px;}
+.header .member a:nth-child(4){margin-left: 6px; margin-bottom: 3px; margin-right: 10px;}
+.header .submenu{position: absolute;}
+.header .submenu.on{width: 100%; height: 380px; border-top: 1px solid #eee; border-bottom: 1px solid #ffbc0d; z-index: 10; background-color: #fff;}
+.header .submenu .submenu-wrap{width: 830px; margin: 0 auto; display: flex; height: 0; overflow: hidden;}
+.header .submenu .submenu-wrap.on{overflow: visible; z-index: 5000;}
+.header .submenu ul{margin-top: 15px; flex-basis: 165px; text-align: left; padding: 20px 10px 45px;}
+.header .submenu ul:nth-child(1){height: 330px;}
+.header .submenu ul:nth-child(2){height: 150px;}
+.header .submenu ul:nth-child(3){height: 100px;}
+.header .submenu ul:nth-child(4){height: 150px;}
+.header .submenu ul li{transition: 0.2s; height: 28px;}
+.header .submenu ul li a{display: inline-block; line-height: 1.6; vertical-align: top; color: #808080;}
+.header .submenu ul li:hover a{color: #000; border-bottom: 1px solid #000;}
+.header .submenu ul:nth-child(1){margin-left: 10px;}
+.header .submenu ul:nth-child(2){margin-left: -30px;}
+.header .submenu ul:nth-child(3){margin-left: -35px;}
+.header .submenu ul:nth-child(4){margin-left: 28px;}
+.header .submenu ul li:not(:nth-child(1)){margin-top: 15px;}
+.header .submenu ul li:hover .role{border-bottom: 1px solid transparent; color: #808080;}
+
+/* header 끝*/
+/* 메뉴 글자 누르면 마우스 커서 표시 안뜸 */
+/* main 시작 */
+.main{width: 100%;}
+.main .main-wrap{max-width: 1980px; margin: 0 auto; flex-wrap: wrap;}
+.main .swiper{width: 100%; margin-top: 140px;}
+.main .swiper .swiper-wrapper{margin: 0 2px;}
+.main .swiper .swiper-slide{justify-content: center; align-items: center; margin: 0 auto;}
+.main .swiper .swiper-slide img{width: 1920px; height: 540px; vertical-align: top;}
+.main .swiper .swiper-button-prev,
+.main .swiper .swiper-button-next{top: 49.5%; width: 90px; height: 90px;margin-top: -45px;}
+.main .swiper .swiper-button-prev{left: 2px; top: 50%; background:url("https://www.mcdonalds.co.kr/kor/images/main/bg_swiper_new.png") 0 0 no-repeat;}
+.main .swiper .swiper-button-next{right: 1px; top: 50%; background:url("https://www.mcdonalds.co.kr/kor/images/main/bg_swiper_new.png") 0 100%  no-repeat;}
+.main .swiper .swiper-button-prev::after,
+.main .swiper .swiper-button-next::after{content: ""; display: none;}
+.main .swiper .swiper-cus-pagination{position: absolute; bottom: 27px; left: 51.7%; display: flex; transform: translateX(-50%); height: 6px; z-index: 99;}
+.main .swiper .swiper-cus-pagination .progress{width: 300px; height: 6px; background-color: #fff; position: relative; border-radius: 5px;}
+.main .swiper .swiper-cus-pagination .progress::after{content:"";  width: 0%; height: 6px; background-color:#ffbc0d; position: absolute; left: 0px; top: 0; border-radius: 5px;}
+.main .swiper .swiper-cus-pagination .pause{width: 36px; height: 36px; background: url("https://www.mcdonalds.co.kr/kor/images/main/bg_swiper_new.png") -92px -36px no-repeat;border: none; position: absolute; top: -15px; cursor: pointer; left: -66px;}
+.main .swiper .swiper-cus-pagination .play{background-position-y: 0;}
+.main .swiper .swiper-cus-pagination .progress.on::after{content: "";  transition: 5.5s; width: 100%;}
+.main .main-content{width: 100%; padding: 20px 0px 30px;background-color: #fbfbfb; margin: 0 auto; position: relative;}
+.main .main-content .main-area{width: 1168px; margin: 0 auto; padding: 0 40px;}
+.main .main-content .main-area h2{margin: 10px 0 60px; color: #292929; font-size: 40px; font-weight: 600; line-height: 1;}
+.main .main-content .main-area ul{margin: 0 0 -35px -35px; display: flex; flex-wrap: wrap;}
+.main .main-content .main-area ul li{width: 366px; height: 438px; margin: 0 0 35px 35px;}
+.main .main-content .main-area ul li a{display: block; overflow: hidden; height: 100%; border-radius: 10px; box-shadow: 0 3px 4px rgba(0,0,0,0.1);}
+.main .main-content .main-area .top img{vertical-align: top;}
+.main .main-content .main-area .bottom{padding: 24px 30px;}
+.main .main-content .main-area .bottom span{font-size: 18px; color: #292929; font-weight: 500; line-height: 1.7; }
+.main .main-content .main-area .btn{margin-top: 80px; text-align: center;}
+.main .main-content .main-area .btn a{display: inline-block; width: 90px; height: 90px; 
+overflow: hidden; vertical-align: top; background: url("../images/m-btn.png") 0 0 no-repeat;}
+.main .main-content .aside{position: fixed; bottom: 40px; left: 49%; margin: 0 0 0 635px; z-index: 1000;}
+.main .main-content .aside.on{position: absolute; bottom: 45px; left: 49%;}
+.main .main-content .aside ul li a{display: block; font-size: 0; width: 121px; height: 121px; overflow: hidden; margin-bottom: 21px;}
+.main .main-content .aside ul li:nth-child(1) a{background: url("../images/품질이야기.png") no-repeat center 1px;} 
+.main .main-content .aside ul li:nth-child(2) a{background: url("../images/McDelivery.png") 0 0 no-repeat; background-size: cover;}
+.main .main-content .aside button{bottom: 40px; left: 50%; width: 51px; height: 48px; background: url("../images/btn_top.png") 0 9px no-repeat; cursor: pointer; margin-left: 35px; font-size: 0; border: 0; margin-top: 1px;}
+/* main 끝 */
+/* footer 시작 */
+.footer{width: 100%; height: 100%; background-color: #292929; font-size: 14px; text-align: center;}
+.footer .foot-area{max-width: 1168px; margin: 0 auto; padding: 40px 0 55px; display:flex; text-align: left;}
+.footer .foot-area ul li a{color: #fff;}
+.footer .foot-area .f-util ul{width: 190px; margin-top: 4px; line-height: 1.95;} 
+.footer .foot-area .f-util ul li{font-size: 14px;}
+.footer .foot-area .f-util > ul > li:nth-child(1) a{color: yellow;}
+.footer .foot-area .f-sns{width: 360px;}
+.footer .foot-area .f-sns ul{display: flex; margin-left:256px;}
+.footer .foot-area .f-sns ul li{margin-left: 20px;}
+.footer .foot-area .f-sns ul li a{font-size: 0; display: block; width: 40px; height: 40px;}
+.footer .foot-area .f-sns ul li:nth-child(1) a{margin-top: 6px; background: url("../images/ico_sns.png") 0 0 no-repeat;}
+.footer .foot-area .f-sns ul li:nth-child(2) a{background: url("../images/ico_sns.png") 0 -40px no-repeat;}
+.footer .foot-area .f-sns ul li:nth-child(3) a{ background: url("../images/ico_sns.png") 0 -80px no-repeat;}
+.footer .foot-area .f-sns ul li:nth-child(4) a{ background: url("../images/ico_sns.png") 0 -120px no-repeat;}
+.footer .foot-area .f-sns ul li:nth-child(5){margin-top: 0px;}
+.footer .foot-area .f-sns ul li:nth-child(5) a{width: 100px; height: 71px; background: none;}
+.footer .foot-area .f-sns ul li a img{width: 100%;}
+.footer .foot-area .f-info{font-weight: 400; opacity: 0.6; color: #fff; margin-top: 3px; line-height: 1.95;}
+.footer .foot-area .f-sns ul li+li{margin-top: 6px;}
+
+/* footer 끝 */
