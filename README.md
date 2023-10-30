@@ -1,7 +1,7 @@
 
 
 <h2 align="center">🍔맥도날드 웹사이트 🍔</h2>
-<img src="https://github.com/kkkkinderjoy/mcdonalds/assets/142365394/16eceaed-252d-49cd-8f6b-3c4b93133302" width="970" alt="mcdonalds" >
+<img src="https://github.com/kkkkinderjoy/mcdonalds/assets/142365394/130b2e4e-f5c0-4d45-bcd2-4f654255f5e1" width="970" alt="mcdonalds" >
 <div>맥도날드 클론코딩 사이트</div>
 
 
