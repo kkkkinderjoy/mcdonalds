@@ -13,7 +13,7 @@
 
 ### 💻 기술스택
 
-- `Javascript`, `Typescript`, `React`
+- `html`, `css`, `javascript`
 - `Figma`
 
 
