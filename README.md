@@ -11,6 +11,13 @@
 <br />
 
 
+### 🔗 피그마 링크
+
+> <https://www.figma.com/file/O7gAC6dJzQQqSuIAUKkiIe/%EB%A7%A5%EB%8F%84%EB%82%A0%EB%93%9C?type=design&node-id=0%3A1&mode=design&t=VUSIFUEbPgnXZLOG-1>
+
+<br />
+
+
 ### 💻 기술스택
 
 - `html`, `css`, `javascript`
@@ -29,7 +36,7 @@
 
 
 ### 프로젝트 기획 배경
-> 수업시간에 html,css,javascript에 대해서 배우면서 맥도날드 사이트를 클론 코딩하였습니다
+> 피그마를 이용한 와이드프레임 수업시간에 html,css,javascript에 대해서 배우면서 맥도날드 사이트를 클론 코딩하였습니다
 <br />
 
 ### 프로젝트 상세 소개
